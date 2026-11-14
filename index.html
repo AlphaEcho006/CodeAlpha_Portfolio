@@ -5,247 +5,274 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Portfolio of Etuk Alexander, aspiring technopreneur building technology that buys back time." />
   <title>Etuk Alexander | Aspiring Technopreneur</title>
+
+  <!-- Elegant serif font. If it fails to load, the page falls back to Georgia -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- ========== NAVIGATION BAR ========== -->
-  <header id="header" class="header">
-    <a href="#home" class="logo">EA<span class="accent">.</span></a>
+  <!-- Soft glowing blobs that drift slowly in the background -->
+  <div class="bg-glow glow-1"></div>
+  <div class="bg-glow glow-2"></div>
 
-    <!-- The hamburger button only appears on small screens -->
+  <!-- ========== HEADER ========== -->
+  <header id="header" class="header">
+    <a href="#home" class="logo serif">Etuk Alexander</a>
+
     <button id="menu-toggle" class="menu-toggle" aria-label="Open menu">
-      <span></span><span></span><span></span>
+      <span></span><span></span>
     </button>
 
     <nav id="nav" class="nav">
       <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#interests">Interests</a>
+      <a href="#process">Process</a>
       <a href="#projects">Projects</a>
-      <a href="#resume">Resume</a>
-      <a href="#contact" class="nav-cta">Contact</a>
+      <a href="#who">Resume</a>
+      <a href="#contact" class="nav-cta">Get in touch</a>
     </nav>
   </header>
 
   <main>
 
-    <!-- ========== HOME (HERO) ========== -->
+    <!-- ========== HERO ========== -->
     <section id="home" class="hero">
-      <div class="hero-text reveal">
-        <p class="eyebrow">Hello, I'm</p>
-        <h1>Etuk <span class="accent">Alexander</span></h1>
-        <h2>Aspiring Technopreneur</h2>
-        <p class="hero-sub">
-          I'm learning to build technology that buys back time, so people can
-          spend more of it with family and friends.
-        </p>
-        <div class="hero-buttons">
-          <a href="#projects" class="btn btn-primary">See my work</a>
-          <a href="#partner" class="btn btn-outline">Partner with me</a>
-        </div>
-      </div>
 
-      <!-- PROFILE PHOTO PLACEHOLDER.
-           Later, replace the <div class="avatar"> line with:
-           <img class="avatar" src="assets/photo.jpg" alt="Etuk Alexander" /> -->
-      <div class="hero-visual reveal">
-        <div class="avatar">EA</div>
-      </div>
-    </section>
+      <!-- Each .px wrapper moves with the mouse (parallax).
+           The .tag inside floats up and down on its own.
+           Two separate jobs, so they do not fight each other. -->
+      <div class="px" data-depth="30" style="top: 22%; left: 6%;"><span class="tag float" style="--d: 0s">🎨 UI/UX Design</span></div>
+      <div class="px" data-depth="45" style="top: 16%; right: 8%;"><span class="tag float" style="--d: 1s">💻 Frontend</span></div>
+      <div class="px" data-depth="25" style="top: 58%; left: 4%;"><span class="tag float" style="--d: 2s">🤖 AI-Powered</span></div>
+      <div class="px" data-depth="40" style="top: 64%; right: 5%;"><span class="tag float" style="--d: 0.5s">🚀 Technopreneur</span></div>
 
-    <!-- ========== ABOUT ========== -->
-    <section id="about" class="section">
-      <h2 class="section-title reveal">About <span class="accent">Me</span></h2>
-      <div class="about-grid">
-        <div class="about-text reveal">
-          <p>
-            I'm Etuk Alexander, an aspiring technopreneur at the start of my
-            career. I became one because I love freedom, and I believe good
-            technology can give people their time back.
-          </p>
-          <p>
-            Right now I'm building my skills in frontend development, UI/UX
-            design, digital marketing and leadership, and I'm learning to use AI
-            as a powerful tool to turn ideas into real products faster.
-          </p>
-          <p>
-            Outside of tech, you'll find me deep in design, aviation, car
-            culture and sound production.
-          </p>
-        </div>
+      <div class="hero-inner">
+        <span class="status reveal"><i></i> Open to partnerships</span>
 
-        <div class="about-card reveal">
-          <h3>Quick facts</h3>
-          <ul>
-            <li><span>Role</span> Aspiring Technopreneur</li>
-            <li><span>Focus</span> Frontend and UI/UX</li>
-            <li><span>Currently</span> CodeAlpha Frontend Intern</li>
-            <li><span>Mission</span> Buy back time with technology</li>
-          </ul>
+        <h1 class="hero-title">
+          <span class="line"><span class="word" style="--i:0">Hi,</span> <span class="word" style="--i:1">I'm</span> <span class="word" style="--i:2">Etuk</span></span>
+          <span class="line serif"><span class="word" style="--i:3">Aspiring</span> <span class="word" style="--i:4">Technopreneur</span></span>
+        </h1>
+
+        <div class="hero-row reveal">
+          <div class="avatar-wrap">
+            <!-- PHOTO PLACEHOLDER. Later replace the div below with:
+                 <img class="avatar" src="assets/photo.jpg" alt="Etuk Alexander" /> -->
+            <div class="avatar serif">EA</div>
+            <div class="ring"></div>
+          </div>
+
+          <p class="hero-sub">
+            I'm learning to build technology that buys back time, so people
+            can spend more of it with the ones they love.
+          </p>
+
+          <a href="#contact" class="btn btn-dark">→ Get in touch</a>
         </div>
       </div>
     </section>
 
-    <!-- ========== SKILLS ========== -->
-    <section id="skills" class="section">
-      <h2 class="section-title reveal">My <span class="accent">Skills</span></h2>
-      <div class="cards">
-        <article class="card reveal">
-          <h3>Frontend Development</h3>
-          <p>Building responsive, interactive websites.</p>
-          <div class="chips"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Git and GitHub</span></div>
-        </article>
-        <article class="card reveal">
-          <h3>UI/UX Design</h3>
-          <p>Designing interfaces that feel simple, clean and fun to use.</p>
-          <div class="chips"><span>Layout</span><span>Color</span><span>User flow</span></div>
-        </article>
-        <article class="card reveal">
-          <h3>Backend</h3>
-          <p>Early steps in how the server side of apps works.</p>
-          <div class="chips"><span>Basics</span><span class="learning">Learning</span></div>
-        </article>
-        <article class="card reveal">
-          <h3>Digital Marketing</h3>
-          <p>Understanding how to get ideas in front of the right people.</p>
-          <div class="chips"><span>Brand</span><span>Social media</span></div>
-        </article>
-        <article class="card reveal">
-          <h3>Leadership</h3>
-          <p>Growing the skills to guide people and projects.</p>
-          <div class="chips"><span class="learning">In training</span></div>
-        </article>
-        <article class="card reveal">
-          <h3>AI-Powered Building</h3>
-          <p>Using AI tools to learn, design and build faster.</p>
-          <div class="chips"><span>Prompting</span><span class="learning">Learning</span></div>
-        </article>
+    <!-- ========== MOVING SKILLS STRIP ========== -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>HTML</span><span>CSS</span><span>JavaScript</span><span>UI/UX Design</span><span>Digital Marketing</span><span>Leadership</span><span>AI Tools</span><span>Git</span>
+        <span>HTML</span><span>CSS</span><span>JavaScript</span><span>UI/UX Design</span><span>Digital Marketing</span><span>Leadership</span><span>AI Tools</span><span>Git</span>
+      </div>
+    </div>
+
+    <!-- ========== FLOATING SHOWCASE ========== -->
+    <section class="showcase reveal" id="work">
+      <div class="showcase-panel">
+        <h2 class="serif showcase-title">Seen recent works</h2>
+
+        <!-- Mini mockups drawn with pure CSS. Each one floats at its own speed. -->
+        <div class="mock mock-calc float" style="--d: 0s; --r: -6deg">
+          <div class="mock-screen">12 + 7</div>
+          <div class="mock-keys"><i></i><i></i><i></i><i class="m"></i><i></i><i></i><i></i><i class="m"></i><i></i><i></i><i></i><i class="m big"></i></div>
+        </div>
+
+        <div class="mock mock-gallery float" style="--d: 1.2s; --r: 4deg">
+          <div class="mock-grid"><i></i><i></i><i></i><i></i></div>
+          <div class="mock-pills"><b class="on"></b><b></b><b></b></div>
+        </div>
+
+        <div class="mock mock-player float" style="--d: 2.2s; --r: -3deg">
+          <div class="mock-disc"></div>
+          <div class="mock-bar"><i></i></div>
+          <div class="mock-ctrl"><b></b><b class="on"></b><b></b></div>
+        </div>
+
+        <div class="mock mock-site float" style="--d: 0.6s; --r: 7deg">
+          <div class="mock-line w60"></div>
+          <div class="mock-line w90"></div>
+          <div class="mock-line w40"></div>
+          <div class="mock-chip"></div>
+        </div>
       </div>
     </section>
 
-    <!-- ========== INTERESTS ========== -->
-    <section id="interests" class="section">
-      <h2 class="section-title reveal">What I <span class="accent">Love</span></h2>
-      <div class="cards">
-        <article class="card interest reveal">
-          <div class="emoji">🎨</div>
+    <!-- ========== ABOUT / FOCUS STATEMENT ========== -->
+    <section id="about" class="statement">
+      <div class="px" data-depth="30" style="top: 8%; left: 3%;"><span class="tag float" style="--d: 0.3s">UI/UX Design</span></div>
+      <div class="px" data-depth="40" style="top: 12%; right: 3%;"><span class="tag float" style="--d: 1.4s">Frontend</span></div>
+      <div class="px" data-depth="25" style="top: 52%; left: 2%;"><span class="tag float" style="--d: 2.1s">Digital Marketing</span></div>
+      <div class="px" data-depth="35" style="top: 56%; right: 2%;"><span class="tag float" style="--d: 0.9s">Leadership</span></div>
+      <div class="px" data-depth="20" style="bottom: 4%; left: 12%;"><span class="tag float" style="--d: 1.8s">Backend basics</span></div>
+      <div class="px" data-depth="30" style="bottom: 6%; right: 12%;"><span class="tag float" style="--d: 2.6s">AI Tools</span></div>
+
+      <p class="eyebrow serif reveal">Hello!</p>
+      <!-- JavaScript splits this text into words, then lights them up as you scroll -->
+      <p class="statement-text scroll-words">My focus is on blending clear strategy, thoughtful design and AI to craft experiences that give people their time back.</p>
+    </section>
+
+    <!-- ========== PROCESS (floating tilted cards) ========== -->
+    <section id="process" class="section">
+      <p class="eyebrow serif reveal">/ How I work</p>
+      <h2 class="section-title reveal">Here's how it works</h2>
+
+      <div class="process">
+        <article class="step float reveal" style="--d: 0s; --r: -4deg">
+          <span class="num serif">01</span>
+          <h3>Discover</h3>
+          <p>Listen to your idea, understand the problem and who it is for.</p>
+        </article>
+        <article class="step float reveal" style="--d: 1s; --r: 3deg">
+          <span class="num serif">02</span>
           <h3>Design</h3>
-          <p>UI/UX and the little details that make something feel right.</p>
+          <p>Turn the idea into a clean, simple and fun interface people enjoy using.</p>
         </article>
-        <article class="card interest reveal">
-          <div class="emoji">✈️</div>
-          <h3>Aviation</h3>
-          <p>The engineering and freedom of flight.</p>
-        </article>
-        <article class="card interest reveal">
-          <div class="emoji">🏎️</div>
-          <h3>Cars and F1</h3>
-          <p>Automotive culture, Formula 1, and competitive sim racing on my to-try list.</p>
-        </article>
-        <article class="card interest reveal">
-          <div class="emoji">🎧</div>
-          <h3>Sound Production</h3>
-          <p>Making and shaping sound.</p>
+        <article class="step float reveal" style="--d: 2s; --r: -2deg">
+          <span class="num serif">03</span>
+          <h3>Deliver</h3>
+          <p>Build it, test it and ship it, improving as we learn.</p>
         </article>
       </div>
     </section>
 
-    <!-- ========== PROJECTS ========== -->
+    <!-- ========== SELECTED WORKS ========== -->
     <section id="projects" class="section">
-      <h2 class="section-title reveal">My <span class="accent">Projects</span></h2>
+      <p class="eyebrow serif reveal">/ Best projects</p>
+      <h2 class="section-title reveal">Selected Works</h2>
       <p class="section-sub reveal">Built during my CodeAlpha Frontend Development internship.</p>
 
-      <div class="cards">
-        <article class="card project reveal">
-          <div class="project-thumb thumb-1">🧮</div>
-          <h3>Calculator</h3>
-          <p>A dark-mode calculator with all four operations, a live display and full keyboard support.</p>
-          <div class="chips"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
-          <div class="project-links">
-            <a href="https://alphaecho006.github.io/CodeAlpha_Calculator/" target="_blank" rel="noopener">Live demo</a>
-            <a href="https://github.com/AlphaEcho006/CodeAlpha_Calculator" target="_blank" rel="noopener">Code</a>
+      <div class="works">
+        <article class="work tilt reveal">
+          <div class="work-thumb t1"><span class="float" style="--d:0s">🧮</span></div>
+          <div class="work-info">
+            <h3>Calculator</h3>
+            <p>Dark-mode calculator with live display and full keyboard support.</p>
+            <div class="work-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+            <div class="work-links">
+              <a href="https://alphaecho006.github.io/CodeAlpha_Calculator/" target="_blank" rel="noopener">Live demo ↗</a>
+              <a href="https://github.com/AlphaEcho006/CodeAlpha_Calculator" target="_blank" rel="noopener">Code ↗</a>
+            </div>
           </div>
         </article>
 
-        <article class="card project reveal">
-          <div class="project-thumb thumb-2">🖼️</div>
-          <h3>Image Gallery</h3>
-          <p>A responsive gallery with category filters, a lightbox viewer, swipe support and smooth animations.</p>
-          <div class="chips"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
-          <div class="project-links">
-            <a href="https://alphaecho006.github.io/CodeAlpha_ImageGallery/" target="_blank" rel="noopener">Live demo</a>
-            <a href="https://github.com/AlphaEcho006/CodeAlpha_ImageGallery" target="_blank" rel="noopener">Code</a>
+        <article class="work tilt reveal">
+          <div class="work-thumb t2"><span class="float" style="--d:0.8s">🖼️</span></div>
+          <div class="work-info">
+            <h3>Image Gallery</h3>
+            <p>Responsive gallery with filters, lightbox, swipe support and animations.</p>
+            <div class="work-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+            <div class="work-links">
+              <a href="https://alphaecho006.github.io/CodeAlpha_ImageGallery/" target="_blank" rel="noopener">Live demo ↗</a>
+              <a href="https://github.com/AlphaEcho006/CodeAlpha_ImageGallery" target="_blank" rel="noopener">Code ↗</a>
+            </div>
           </div>
         </article>
 
-        <article class="card project reveal">
-          <div class="project-thumb thumb-3">🎵</div>
-          <h3>Music Player</h3>
-          <p>A player with a spinning record, progress bar, volume control, playlist and autoplay.</p>
-          <div class="chips"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
-          <div class="project-links">
-            <a href="https://alphaecho006.github.io/CodeAlpha_MusicPlayer/" target="_blank" rel="noopener">Live demo</a>
-            <a href="https://github.com/AlphaEcho006/CodeAlpha_MusicPlayer" target="_blank" rel="noopener">Code</a>
+        <article class="work tilt reveal">
+          <div class="work-thumb t3"><span class="float" style="--d:1.6s">🎵</span></div>
+          <div class="work-info">
+            <h3>Music Player</h3>
+            <p>Player with a spinning record, progress bar, volume and a playlist.</p>
+            <div class="work-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+            <div class="work-links">
+              <a href="https://alphaecho006.github.io/CodeAlpha_MusicPlayer/" target="_blank" rel="noopener">Live demo ↗</a>
+              <a href="https://github.com/AlphaEcho006/CodeAlpha_MusicPlayer" target="_blank" rel="noopener">Code ↗</a>
+            </div>
           </div>
         </article>
       </div>
     </section>
 
-    <!-- ========== RESUME ========== -->
-    <section id="resume" class="section">
-      <h2 class="section-title reveal">My <span class="accent">Resume</span></h2>
+    <!-- ========== WHO AM I ========== -->
+    <section id="who" class="section">
+      <p class="eyebrow serif reveal">/ Who am I</p>
+      <h2 class="section-title reveal">Chasing freedom <span class="dim">through technology</span></h2>
 
-      <div class="timeline">
-        <div class="timeline-item reveal">
-          <span class="timeline-date">Now</span>
-          <h3>Frontend Development Intern</h3>
-          <p>CodeAlpha. Building real projects with HTML, CSS and JavaScript, from calculators to galleries to players.</p>
+      <div class="who">
+        <div class="who-photo reveal">
+          <!-- Replace with: <img src="assets/photo.jpg" alt="Etuk Alexander" /> -->
+          <div class="who-placeholder serif">EA</div>
+          <div class="who-name">Etuk Alexander<br /><span>Aspiring Technopreneur</span></div>
         </div>
-        <div class="timeline-item reveal">
-          <span class="timeline-date">Ongoing</span>
-          <h3>Self-driven Learning</h3>
-          <p>UI/UX design, digital marketing, backend basics, leadership, and using AI to learn and build faster.</p>
+
+        <div class="who-text reveal">
+          <p>
+            I'm just starting my career as a technopreneur. I love design,
+            aviation, car culture, F1 and sound production, and I became a
+            technopreneur to build technology that gives people their time back.
+          </p>
+          <p>
+            I'm growing my skills in frontend development, UI/UX design, digital
+            marketing and leadership, and learning to use AI to build faster.
+          </p>
+
+          <ul class="rows">
+            <li><span>Frontend Development Intern</span><em>CodeAlpha</em><b>Now</b></li>
+            <li><span>UI/UX and Design</span><em>Self-driven</em><b>Ongoing</b></li>
+            <li><span>Digital Marketing</span><em>Self-driven</em><b>Ongoing</b></li>
+            <li><span>Leadership</span><em>In training</em><b>Ongoing</b></li>
+          </ul>
+
+          <!-- Change href="#" to "assets/resume.pdf" once you add your resume,
+               then delete the resume block in script.js -->
+          <a href="#" id="resume-btn" class="btn btn-mint">Download Resume (PDF)</a>
         </div>
       </div>
-
-      <!-- Replace "#" with "assets/resume.pdf" once you add your resume file -->
-      <div class="center reveal">
-        <a href="#" class="btn btn-primary" id="resume-btn">Download Resume (PDF)</a>
-      </div>
     </section>
 
-    <!-- ========== PARTNER WITH ME ========== -->
-    <section id="partner" class="section">
-      <div class="partner-box reveal">
-        <h2>Got an idea but can't build it <span class="accent">yet?</span></h2>
-        <p>
-          Great ideas shouldn't stay stuck in someone's head. If you have a
-          vision for a product, a website or a tool, let's connect. I'd love to
-          partner with you and help bring it to life.
-        </p>
-        <a href="#contact" class="btn btn-primary">Let's build it together</a>
-      </div>
-    </section>
+    <!-- ========== LET'S MAKE IT HAPPEN ========== -->
+    <section id="contact" class="cta">
+      <div class="px" data-depth="30" style="top: 14%; left: 8%;"><span class="tag float" style="--d: 0s">💡 Got an idea?</span></div>
+      <div class="px" data-depth="40" style="top: 20%; right: 8%;"><span class="tag float" style="--d: 1.2s">🤝 Let's partner</span></div>
+      <div class="px" data-depth="25" style="bottom: 14%; left: 14%;"><span class="tag float" style="--d: 2s">⏳ Buy back time</span></div>
 
-    <!-- ========== CONTACT ========== -->
-    <section id="contact" class="section">
-      <h2 class="section-title reveal">Get in <span class="accent">Touch</span></h2>
-      <p class="section-sub reveal">Reach out for partnerships, collaborations or just to say hi.</p>
-
-      <div class="contact-links reveal">
-        <!-- PLACEHOLDERS: replace each link with your real one -->
-        <a href="mailto:your-email@example.com">✉️ Email</a>
-        <a href="https://www.linkedin.com/in/your-username" target="_blank" rel="noopener">💼 LinkedIn</a>
-        <a href="https://github.com/AlphaEcho006" target="_blank" rel="noopener">💻 GitHub</a>
-        <a href="https://x.com/your-username" target="_blank" rel="noopener">🐦 X</a>
-      </div>
+      <h2 class="serif cta-title reveal">Let's make it happen</h2>
+      <p class="cta-text reveal">
+        Have an idea you can't build yet? Great ideas shouldn't stay stuck in
+        someone's head. Connect with me and let's partner to bring it to life.
+      </p>
+      <a href="mailto:your-email@example.com" class="btn btn-dark reveal">→ Get in touch</a>
     </section>
 
   </main>
 
+  <!-- ========== FOOTER ========== -->
   <footer class="footer">
-    <p>&copy; <span id="year"></span> Etuk Alexander. Built with HTML, CSS and JavaScript.</p>
+    <div class="footer-row">
+      <nav class="footer-nav">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <!-- PLACEHOLDERS: replace with your real links -->
+      <nav class="footer-social">
+        <a href="mailto:your-email@example.com">Email</a>
+        <a href="https://www.linkedin.com/in/your-username" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/AlphaEcho006" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://x.com/your-username" target="_blank" rel="noopener">X</a>
+      </nav>
+
+      <p class="copy">&copy; <span id="year"></span> Etuk Alexander. All rights reserved.</p>
+    </div>
+
+    <div class="giant-name serif" aria-hidden="true">Etuk Alexander</div>
   </footer>
 
   <script src="script.js"></script>
